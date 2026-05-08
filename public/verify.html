@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>LOGEN – Verify Certificate</title></head>
+<body>
+<div id="root">Loading...</div>
+<script>
+  const target = location.pathname.split('/').pop();
+  fetch(`/api/v1/trust?target=${target}`)
+    .then(r => r.json())
+    .then(data => {
+      document.getElementById('root').innerHTML = `
+        <h1>🔍 LOGEN Trust Certificate</h1>
+        <p><strong>Entity:</strong> ${data.target}</p>
+        <p><strong>Score:</strong> ${data.score}/100</p>
+        <p><strong>Grade:</strong> ${data.grade}</p>
+        <p><small>Timestamp: ${new Date().toISOString()}</small></p>
+      `;
+    });
+</script>
+</body>
+</html> 

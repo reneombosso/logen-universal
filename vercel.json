@@ -1,0 +1,9 @@
+ {
+  "routes": [
+    { "src": "/api/v1/(.*)", "dest": "/api/v1/$1" },
+    { "src": "/badge.js", "dest": "/public/badge.js" },
+    { "src": "/verify/(.*)", "dest": "/public/verify.html" },
+    { "src": "/trust/(.*)", "dest": "/public/trust/$1" },
+    { "src": "/", "dest": "/public/landing.html" }
+  ]
+}

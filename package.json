@@ -1,0 +1,17 @@
+{
+  "name": "logen-universal",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "seed": "node scripts/seed-domains.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "stripe": "^14.0.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "vercel": "^34.0.0"
+  }
+} 
